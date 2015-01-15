@@ -13,11 +13,11 @@ end
 function PluginOnTick()
 	Checks()
 	if Target and (AutoCarry.MainMenu.MixedMode) then
-		if QREADY and Menu.useQ2 and GetDistance(Target) <= qRange then CastSpell(_Q) end
+		if QREADY and Menu.useQ2 and GetDistance(Target) <= qRange then CastSpell(_Q,Target) end
 		
 	end
 		if Target and (AutoCarry.MainMenu.AutoCarry) then
-		if QREADY and Menu.useQ and GetDistance(Target) <= qRange then CastSpell(_Q) end
+		if QREADY and Menu.useQ and GetDistance(Target) <= qRange then CastSpell(_Q,Target) end
 	
 	end
 end
