@@ -13,15 +13,27 @@ end
 function PluginOnTick()
 	Checks()
 	if Target and (AutoCarry.MainMenu.MixedMode) then
-		if QREADY and Menu.useQ2 and GetDistance(Target) <= qRange then CastSpell(_Q,Target) end
+		if QREADY and Menu.useQ2 and GetDistance(Target) <= qRange then
+		CastSpell(_Q,Target)
+		MoveToMouse()
+		end
+	
 		
 	end
 		if Target and (AutoCarry.MainMenu.AutoCarry) then
-		if QREADY and Menu.useQ and GetDistance(Target) <= qRange then CastSpell(_Q,Target) end
+		if QREADY and Menu.useQ and GetDistance(Target) <= qRange then
+		CastSpell(_Q,Target)
+		MoveToMouse()
+		end
+		
 	
 	end
 end
-
+function MoveToMouse()
+	local MousePos = Vector(mousePos.x, mousePos.y, mousePos.z)
+	local Position = myHero + (Vector(MousePos) - myHero):normalized()*300
+	myHero:MoveTo(Position.x, Position.z)
+end
 function PluginOnDraw()
 	--> Ranges
 	if not Menu.drawMaster and not myHero.dead then
