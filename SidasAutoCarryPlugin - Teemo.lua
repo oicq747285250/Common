@@ -1,6 +1,5 @@
 if myHero.charName ~= "Teemo" then return end
 
---require "AoE_Skillshot_Position"
 
 
 function PluginOnLoad()
@@ -55,16 +54,11 @@ end
 --> Main Menu
 function mainMenu()
 	Menu:addParam("sep0", "-- Ultimate Options --", SCRIPT_PARAM_INFO, "")
-	--Menu:addParam("rMEC", "Crescendo - Use MEC", SCRIPT_PARAM_ONOFF, true)
-  --Menu:addParam("rEnemies", "Crescendo - Min Enemies",SCRIPT_PARAM_SLICE, 2, 1, 5, 0)
 	Menu:addParam("sep1", "-- Autocarry Mode --", SCRIPT_PARAM_INFO, "")
-	Menu:addParam("useQ", "Use - Hymn of Valor", SCRIPT_PARAM_ONOFF, true)
-	--Menu:addParam("useR", "Use - Crescendo", SCRIPT_PARAM_ONOFF, true)
+	Menu:addParam("useQ", "Use - Q", SCRIPT_PARAM_ONOFF, true)
 	Menu:addParam("sep2", "-- Mixed Mode --", SCRIPT_PARAM_INFO, "")
-	Menu:addParam("useQ2", "Use - Hymn of Valor", SCRIPT_PARAM_ONOFF, true)
-	--Menu:addParam("useR2", "Use - Crescendo", SCRIPT_PARAM_ONOFF, false)
+	Menu:addParam("useQ2", "Use - Q", SCRIPT_PARAM_ONOFF, true)
 	Menu:addParam("sep3", "-- Draw Options --", SCRIPT_PARAM_INFO, "")
 	Menu:addParam("drawMaster", "Disable Draw", SCRIPT_PARAM_ONOFF, false)
-	Menu:addParam("drawQ", "Draw - Hymn of Valor", SCRIPT_PARAM_ONOFF, false)
-	--Menu:addParam("drawR", "Draw - Crescendo", SCRIPT_PARAM_ONOFF, false)
+	Menu:addParam("drawQ", "Draw - Q", SCRIPT_PARAM_ONOFF, false)
 end
